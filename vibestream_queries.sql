@@ -10,11 +10,11 @@ Expected column names: char_limit_posts
 -- q1 solution:
 
 SELECT 
-			COUNT(post_id) AS char_limit_posts
+	COUNT(post_id) AS char_limit_posts
 FROM
-			posts
+	posts
 WHERE
-			LENGTH(content) = 25
+	LENGTH(content) = 25
 ;
 
 
@@ -58,7 +58,7 @@ FROM
     filterd_table
 WHERE 
     ABS(nums_james_post - nums_robert_post) > 2  -- Return dates where the absolut difference in post counts is greater than 2
-  ;
+;
 
 
 
@@ -77,7 +77,7 @@ HAVING
         SUM(CASE WHEN users.user_name = 'JamesTiger8285' THEN 1 ELSE 0 END) -  -- Count posts by James
         SUM(CASE WHEN users.user_name = 'RobertMermaid7605' THEN 1 ELSE 0 END)  -- Count posts by Robert
     ) > 2               -- Only return dates where the absolut difference in post counts is greater than 2
-  ;               
+;               
 
 
 
@@ -156,7 +156,7 @@ UNION
 SELECT follower_id FROM four_step_path
 ORDER BY follower_id
 LIMIT 10
-  ;     
+;     
 
 /*
 Question #4: 
@@ -200,4 +200,4 @@ WHERE
 		rank <= 2  -- Only show top 2 ranks
 ORDER BY 
 		post_date, user_id
-  ;
+;
